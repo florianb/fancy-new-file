@@ -73,6 +73,7 @@ class FancyNewFileView extends View
         newPath = path.join(@inputPath(), files[0])
         relativePath = atom.project.relativize(newPath) + path.sep
         @miniEditor.getEditor().setText relativePath
+        @miniEditor.scrollToCursorPosition()
       else
         atom.beep()
 
